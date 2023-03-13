@@ -1,0 +1,115 @@
+.gallery {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  line-height: 2.63rem;
+  font-weight: 600;
+  font-family: inherit;
+}
+.gridColumns {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-base);
+}
+.fluidImageIcon {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  border-radius: var(--br-base);
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.more {
+  position: absolute;
+  margin: 0 !important;
+  top: calc(50% - 12px);
+  left: calc(50% - 46.67px);
+  line-height: 1.5rem;
+  font-weight: 600;
+  z-index: 1;
+}
+.lastImage,
+.rows {
+  align-self: stretch;
+  flex: 1;
+  flex-direction: column;
+}
+.lastImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.rows {
+  align-items: flex-start;
+  gap: var(--gap-base);
+}
+.container,
+.gallerySection,
+.rows {
+  display: flex;
+  justify-content: flex-start;
+}
+.container {
+  flex: 1;
+  width: 56.25rem;
+  flex-direction: row;
+  align-items: flex-start;
+  font-size: var(--heading-heading-41-size);
+  color: var(--palette-neutrals-1001);
+}
+.gallerySection {
+  align-self: stretch;
+  background-color: var(--palette-neutrals-1001);
+  flex-direction: column;
+  padding: var(--padding-45xl) 0;
+  align-items: center;
+  gap: var(--gap-21xl);
+  text-align: center;
+  font-size: var(--heading-heading-11-size);
+  color: var(--light-text-txt-primary1);
+  font-family: var(--heading-heading-11);
+}
+@media screen and (max-width: 1200px) {
+  .container {
+    height: auto;
+    padding-left: var(--padding-base);
+    padding-right: var(--padding-base);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 960px) {
+  .container {
+    align-self: stretch;
+    width: auto;
+  }
+}
+@media screen and (max-width: 420px) {
+  .gallery {
+    font-size: var(--heading-heading-2-size);
+  }
+  .gridColumns {
+    flex-direction: column;
+  }
+  .container,
+  .lastImage,
+  .rows {
+    flex: unset;
+    align-self: stretch;
+  }
+  .container,
+  .rows {
+    flex-direction: column;
+  }
+  .container {
+    width: auto;
+    flex: 1;
+  }
+}

@@ -1,0 +1,195 @@
+.relatedStories {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  line-height: 2.63rem;
+  font-weight: 600;
+  font-family: inherit;
+}
+.imageIcon {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  border-radius: var(--br-base);
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.cards,
+.lremIpsumsDel {
+  align-self: stretch;
+  display: flex;
+}
+.lremIpsumsDel {
+  margin: 0 !important;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1rem;
+  font-size: inherit;
+  line-height: 1.5rem;
+  font-weight: 600;
+  font-family: inherit;
+  align-items: flex-end;
+  height: 4.5rem;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.cards {
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+.lremIpsumsDel1 {
+  margin: 0 !important;
+  position: absolute;
+  bottom: 1.47rem;
+  left: 1rem;
+  font-size: inherit;
+  line-height: 1.5rem;
+  font-weight: 600;
+  font-family: inherit;
+  display: flex;
+  align-items: flex-end;
+  width: 13.56rem;
+  z-index: 1;
+}
+.cards1 {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+.lremIpsumsDel2 {
+  margin: 0 !important;
+  position: absolute;
+  bottom: 1.47rem;
+  left: 1rem;
+  font-size: inherit;
+  line-height: 1.5rem;
+  font-weight: 600;
+  font-family: inherit;
+  display: flex;
+  align-items: flex-end;
+  width: 13.56rem;
+  height: 4.5rem;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.gridColumns {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-base);
+}
+.lremIpsumsDel3 {
+  margin: 0 !important;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1rem;
+  font-size: inherit;
+  line-height: 1.5rem;
+  font-weight: 600;
+  font-family: inherit;
+  display: flex;
+  align-items: flex-end;
+  width: 13.56rem;
+  height: 4.5rem;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.gridRows {
+  align-self: stretch;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-base);
+}
+.container,
+.gridRows,
+.storiesSection {
+  display: flex;
+  justify-content: flex-start;
+}
+.container {
+  width: 75rem;
+  height: 34.56rem;
+  flex-shrink: 0;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--gap-base);
+  text-align: left;
+  font-size: var(--heading-heading-41-size);
+  color: var(--palette-neutrals-1001);
+}
+.storiesSection {
+  align-self: stretch;
+  background-color: var(--shared-white1);
+  flex-direction: column;
+  padding: var(--padding-21xl) 0 var(--padding-61xl);
+  align-items: center;
+  gap: var(--gap-21xl);
+  text-align: center;
+  font-size: var(--heading-heading-11-size);
+  color: var(--light-text-txt-primary1);
+  font-family: var(--heading-heading-11);
+}
+@media screen and (max-width: 1200px) {
+  .container,
+  .gridColumns,
+  .gridRows {
+    gap: var(--gap-base);
+  }
+  .container {
+    align-self: stretch;
+    width: auto;
+    padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 960px) {
+  .container {
+    align-self: stretch;
+    width: auto;
+    gap: var(--gap-base);
+    padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 420px) {
+  .relatedStories {
+    font-size: var(--heading-heading-2-size);
+  }
+  .lremIpsumsDel {
+    font-size: var(--body-medium-regular-size);
+  }
+  .lremIpsumsDel1,
+  .lremIpsumsDel2,
+  .lremIpsumsDel3 {
+    font-size: var(--body-medium-regular-size);
+    align-self: stretch;
+    width: auto;
+  }
+}
+@media screen and (max-width: 640px) {
+  .cards,
+  .gridRows {
+    flex: unset;
+    align-self: stretch;
+  }
+  .container {
+    height: auto;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,41 @@
+.parisFrance,
+.welcome {
+  position: relative;
+  line-height: 1.5rem;
+}
+.parisFrance {
+  font-size: var(--heading-heading-11-size);
+  line-height: 2.63rem;
+  font-weight: 600;
+}
+.heroSection,
+.heroTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.heroTitle {
+  margin: 0 !important;
+  position: absolute;
+  top: calc(50% - 33px);
+  left: calc(50% - 113px);
+  justify-content: center;
+  z-index: 0;
+}
+.heroSection {
+  align-self: stretch;
+  height: 37.5rem;
+  flex-shrink: 0;
+  padding: var(--padding-45xl) 0;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  position: relative;
+  background-image: url(/hero-section@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  text-align: center;
+  font-size: var(--body-medium-regular-size);
+  color: var(--shared-white1);
+  font-family: var(--heading-heading-11);
+}

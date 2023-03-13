@@ -1,0 +1,133 @@
+.degreeView {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  line-height: 2.63rem;
+  font-weight: 600;
+  font-family: inherit;
+}
+.degreeRotateIcon1,
+.roundedRectangleIcon {
+  position: relative;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.roundedRectangleIcon {
+  align-self: stretch;
+  border-radius: var(--br-base);
+  max-width: 100%;
+  height: 28.13rem;
+  object-fit: cover;
+  z-index: 0;
+}
+.degreeRotateIcon1 {
+  width: 1rem;
+  height: 1rem;
+}
+.smallButton {
+  position: relative;
+  font-size: var(--body-small-bold1-size);
+  line-height: 1.25rem;
+  font-weight: 600;
+  font-family: var(--heading-heading-11);
+  color: var(--shared-white1);
+  text-align: center;
+}
+.frame,
+.masterSmall {
+  display: flex;
+  align-items: center;
+}
+.masterSmall {
+  cursor: pointer;
+  border: 1px solid var(--shared-white1);
+  padding: var(--padding-xs) var(--padding-base);
+  background-color: transparent;
+  margin: 0 !important;
+  position: absolute;
+  top: calc(50% - 18px);
+  left: calc(50% - 82px);
+  border-radius: var(--br-81xl);
+  box-sizing: border-box;
+  height: 2.25rem;
+  flex-shrink: 0;
+  overflow: hidden;
+  flex-direction: row;
+  justify-content: center;
+  gap: var(--gap-3xs);
+  z-index: 1;
+}
+.frame {
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+}
+.roundedRectangleIcon1 {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  border-radius: var(--br-base);
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.frame1 {
+  flex: 1;
+  height: 28.13rem;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.aframeSection,
+.container,
+.frame1 {
+  display: flex;
+  justify-content: flex-start;
+}
+.container {
+  width: 75rem;
+  overflow: hidden;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--gap-base);
+}
+.aframeSection {
+  align-self: stretch;
+  background-color: var(--palette-neutrals-8001);
+  flex-direction: column;
+  padding: var(--padding-45xl) 0;
+  align-items: center;
+  gap: var(--gap-21xl);
+  text-align: center;
+  font-size: var(--heading-heading-11-size);
+  color: var(--shared-white1);
+  font-family: var(--heading-heading-11);
+}
+@media screen and (max-width: 1200px) {
+  .container {
+    height: auto;
+    padding-left: var(--padding-base);
+    padding-right: var(--padding-base);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 960px) {
+  .frame,
+  .frame1 {
+    flex: unset;
+    align-self: stretch;
+  }
+  .container {
+    align-self: stretch;
+    width: auto;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 420px) {
+  .degreeView {
+    font-size: var(--heading-heading-2-size);
+  }
+}

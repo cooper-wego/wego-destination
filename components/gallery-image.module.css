@@ -1,0 +1,16 @@
+.fluidImageIcon {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  border-radius: var(--br-base);
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+@media screen and (max-width: 420px) {
+  .fluidImageIcon {
+    flex: unset;
+    align-self: stretch;
+  }
+}

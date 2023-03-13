@@ -1,0 +1,69 @@
+.frameChild {
+  position: relative;
+  border-radius: var(--br-5xl);
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.rectangleParent,
+.wandaAriana {
+  display: flex;
+  align-items: center;
+}
+.wandaAriana {
+  align-self: stretch;
+  position: relative;
+  line-height: 1.5rem;
+  font-weight: 600;
+  width: 18.06rem;
+  flex-shrink: 0;
+}
+.rectangleParent {
+  width: 22.06rem;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: var(--gap-base);
+}
+.highlyRecommended,
+.worthEvenIf {
+  align-self: stretch;
+  position: relative;
+  line-height: 1.25rem;
+}
+.highlyRecommended {
+  font-weight: 600;
+}
+.worthEvenIf {
+  color: var(--wego-light-text-icon-secondary1);
+}
+.frameParent,
+.highlyRecommendedParent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  font-size: var(--body-small-bold1-size);
+}
+.frameParent {
+  flex: 1;
+  gap: var(--gap-base);
+  text-align: left;
+  font-size: var(--body-medium-regular-size);
+  color: var(--light-text-txt-primary1);
+  font-family: var(--heading-heading-11);
+}
+@media screen and (max-width: 960px) {
+  .frameParent {
+    flex: unset;
+    align-self: stretch;
+  }
+}
+@media screen and (max-width: 420px) {
+  .frameParent {
+    flex: unset;
+    align-self: stretch;
+  }
+}
