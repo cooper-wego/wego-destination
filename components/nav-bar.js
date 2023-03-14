@@ -1,6 +1,9 @@
+import LocaleSwitcher from "./locale-switcher"
+import { useTranslation } from "next-i18next"
 import styles from "./nav-bar.module.css"
 
 const NavBar = () => {
+  const { t } = useTranslation("")
   return (
     <div className={styles.navBar}>
       <div className={styles.navContainer}>
