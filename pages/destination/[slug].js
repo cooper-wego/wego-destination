@@ -1,20 +1,83 @@
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+// import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import NavBar from "../../components/nav-bar"
 import HeroSection from "../../components/hero-section"
 import StoriesSection from "../../components/stories-section"
 import GallerySection from "../../components/gallery-section"
-import PanaromicSection from "../../components/panaromic-section"
 import CustomerReviewSection from "../../components/customer-review-section"
 import Footer from "../../components/footer"
 import styles from "./index.module.css"
+import { request } from "../../lib/datocms"
+import { Image } from "react-datocms"
 
-import { getAllSlugs, getDestinationData } from "../../lib/mock"
+// import { getAllSlugs, getDestinationData } from "../../lib/mock"
+
+const PATH_QUERY = `
+query MyQuery {
+  allDestinations {
+    slug
+  }
+}
+`
+export async function getStaticPaths() {
+  const slugQuery = await request({
+    query: PATH_QUERY,
+  })
+
+  let paths = []
+  slugQuery.allDestinations.map((p) => paths.push(`/destination/${p.slug}`))
+
+  return {
+    paths,
+    fallback: false,
+  }
+}
+
+const DESTINATION_QUERY = `
+query MyQuery($slug: String) {
+  destination(filter: {slug: {eq: $slug}}) {
+    name
+    title
+    coverImage {
+      responsiveImage(sizes: "") {
+        alt
+        aspectRatio
+        base64
+        bgColor
+        height
+        sizes
+        src
+        srcSet
+        title
+        webpSrcSet
+        width
+      }
+    }
+    content {
+      value
+    }
+    slug
+    publishDate
+    id
+  }
+}`
+
+export async function getStaticProps({ params }) {
+  const data = await request({
+    query: DESTINATION_QUERY,
+    variables: { slug: params.slug },
+  })
+  return {
+    props: {
+      destinationData: data.destination,
+    },
+  }
+}
 
 export default function DestinationLocofy({ destinationData }) {
   return (
     <div className={styles.destinationLocofy}>
       <NavBar />
-      <HeroSection title={destinationData.sectionTitle} image={destinationData.heroImage} />
+      <HeroSection />
       <div className={styles.attractionSection}>
         <h1 className={styles.sectionTitle}>Top Attractions in {destinationData.name}</h1>
         <div className={styles.container}>
@@ -173,7 +236,6 @@ export default function DestinationLocofy({ destinationData }) {
         </div>
       </div>
       <GallerySection />
-      <PanaromicSection />
       <CustomerReviewSection />
       <div className={styles.nearbySection}>
         <div className={styles.bestTimeTo}>Nearby Destinations</div>
@@ -204,20 +266,22 @@ export default function DestinationLocofy({ destinationData }) {
   )
 }
 
-export async function getStaticPaths() {
-  const paths = await getAllSlugs()
-  return {
-    paths,
-    fallback: false,
-  }
-}
+// Local Mock data with locales
 
-export async function getStaticProps({ params, locale }) {
-  const destinationData = await getDestinationData(params.slug)
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ["common"])),
-      destinationData,
-    },
-  }
-}
+// export async function getStaticPaths() {
+//   const paths = await getAllSlugs()
+//   return {
+//     paths,
+//     fallback: false,
+//   }
+// }
+
+// export async function getStaticProps({ params, locale }) {
+//   const destinationData = await getDestinationData(params.slug)
+//   return {
+//     props: {
+//       ...(await serverSideTranslations(locale, ["common"])),
+//       destinationData,
+//     },
+//   }
+// }

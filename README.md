@@ -12,3 +12,11 @@ To preview and run the project on your device:
 
 https://www.techomoro.com/multi-language-next-js-website-using-i18next-rtl-support/
 https://lokalise.com/blog/react-i18n-intl/
+
+# Next.js + Headless CMS + GraphQL - Next.js tutorial for beginners (part 2)
+
+https://www.youtube.com/watch?v=_VIF1if-dNA&list=WL&index=3&t=318s
+
+# Creating a Localized Blog using Next.js and DatoCMS
+
+https://www.youtube.com/watch?v=3tBeOwdVuwo
