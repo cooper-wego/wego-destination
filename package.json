@@ -3,6 +3,7 @@
     "version": "0.1.0",
     "private": true,
     "dependencies": {
+        "dotenv": "^16.0.3",
         "next": "^12.2.5",
         "next-i18next": "^13.2.2",
         "react": "^18.2.0",

@@ -1,14 +1,12 @@
 {
-  "home": {
-    "Home title": "Home title",
-    "Home description": "Home description"
+  "navbar": {
+    "Flights": "Flights",
+    "Hotels": "Hotels",
+    "Activities": "Activities",
+    "Car Rentals": "Car Rentals",
+    "Travel Blog": "Travel Blog"
   },
-  "about": {
-    "About title": "About title",
-    "About description": "About description"
-  },
-  "header": {
-    "Home": "Home",
-    "About": "About"
+  "hero": {
+    "Welcome to": "Welcome to"
   }
 }
